@@ -1,10 +1,15 @@
 /*
  * @Author: liujie
  * @Date:   2018-04-17 19:19:35
- * @Last Modified by:   liujie
- * @Last Modified time: 2018-04-18 14:43:38
+ * @Last Modified by: ihoey
+ * @Last Modified time: 2018-04-25 18:51:41
  */
+
 import axios from '@/services';
+import storejs from 'store/dist/store.legacy'
+const {
+  uid
+} = storejs.get('userInfo') || ''
 
 class CommonService {
   constructor(http) {
@@ -18,7 +23,7 @@ class CommonService {
       }
     });
   }
-  userDetials(uid) {
+  userDetials() {
     return this.http.get('/user/detail', {
       params: {
         uid
@@ -28,7 +33,7 @@ class CommonService {
   userInfo() {
     return this.http.get('/user/subcount')
   }
-  userSongList(uid) {
+  userSongList() {
     return this.http.get('/user/playlist', {
       params: {
         uid

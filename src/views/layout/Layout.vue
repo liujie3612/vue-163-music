@@ -10,7 +10,6 @@
 </template>
 <script>
 import { Headers, List, Contents, Footers } from './components'
-import userService from 'service/user'
 
 export default {
   name: 'layout',
@@ -19,19 +18,6 @@ export default {
     List,
     Contents,
     Footers
-  },
-  created() {
-    this.login()
-  },
-  methods: {
-    login() {
-      // userService.login('13581702065','').then((res) => {
-      //   console.log(res)
-      // })
-      // userService.userInfo().then((res) => {
-      //   console.log(res)
-      // })
-    }
   }
 }
 

@@ -1,0 +1,14 @@
+/*
+ * @Author: ihoey
+ * @Date: 2018-04-24 11:07:16
+ * @Last Modified by:   ihoey
+ * @Last Modified time: 2018-04-24 11:07:16
+ */
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
